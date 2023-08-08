@@ -1,0 +1,34 @@
+.main__title-block {
+    position: relative;
+    padding-left: 25.2rem;
+    padding-top: 24.1rem;
+    padding-bottom: 32rem;
+    
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+
+    h1 {
+        color: var(--white);
+        font-family: TT Firs Neue;
+        font-size: 9.6rem;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    p {
+        color: var(--white);
+        font-family: Gilroy;
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 150%;
+        width: 90.1rem;
+        margin-top: 2.8rem;
+    }
+}

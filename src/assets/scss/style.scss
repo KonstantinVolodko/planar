@@ -44,7 +44,7 @@ html {
 }
 
 body {
-    font-family: 'Gilroy';
+    font-family: TT Firs Neue;
     font-style: normal;
 }
 
@@ -66,4 +66,5 @@ svg {
 @import './blocks/header.scss';
 @import './blocks/swiper.scss';
 @import './blocks/footer.scss';
+@import './blocks/main.scss';
 
