@@ -1,0 +1,205 @@
+.footer {
+    background: rgba(0, 0, 0, 0.10);
+    padding: 6.9rem 26.4rem 3.5rem 25.1rem;
+}
+
+.footer__logo {
+    width: 20rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.footer-top-container {
+    display: flex;
+    justify-content: space-between;
+
+    ul:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 3.7rem;
+        width: 33.6rem;
+
+        li {
+            color: var(--black);
+            font-family: Gilroy;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 150%
+        }
+    }
+
+    ul:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        li:first-child {
+            color: var(--black);
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            a {
+                text-decoration: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+
+                li {
+                    a {
+                        color: var(--black);
+                        font-family: Gilroy;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        line-height: 180%;
+                    }
+                }
+
+                li:nth-child(2) {
+                    margin-top: 0rem;
+                }
+            }
+        }
+
+        li:last-child {
+            ul {
+                gap: 2.2rem;
+
+                li {
+                    a {
+                        color: var(--black);
+                        font-size: 2rem;
+                        font-weight: 600;
+                        line-height: 130%;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    ul:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        li {
+            a {
+                color: var(--black);
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+    }
+
+    ul:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li:first-child {
+            ul {
+                display: flex;
+                gap: 1.2rem;
+                flex-direction: row;
+
+                a {
+                    text-decoration: none;
+                    color: #898989;
+                    font-family: Gilroy;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                }
+
+                a.active {
+                    color: var(--black);
+                }
+            }
+        }
+
+        li:last-child {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                li {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    div {
+                        width: 3.6rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    a {
+                        color: var(--black);
+                        font-family: Gilroy;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        li {
+            color: var(--black);
+            font-family: Gilroy;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+
+            a {
+                color: var(--black);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    a {
+        margin-left: 12.3rem;
+        color: var(--black);
+        font-family: Gilroy;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    a:last-of-type {
+        text-decoration: none;
+        margin-left: 0rem;
+
+        svg {
+            width: 8.5rem;
+            height: 2.5rem;
+        }
+    }
+}

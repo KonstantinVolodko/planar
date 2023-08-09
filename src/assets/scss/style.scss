@@ -7,13 +7,13 @@ html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
 
-  @include breakpoint($ssh-bp) {
-    font-size: calc(100vw / 1600 * 10);
-  }
+  // @include breakpoint($ssh-bp) {
+  //   font-size: calc(100vw / 1600 * 10);
+  // }
 
-  @include breakpoint($cos-bp) {
-    font-size: calc(100vw / 1330 * 10);
-  }
+  // @include breakpoint($cos-bp) {
+  //   font-size: calc(100vw / 1330 * 10);
+  // }
 
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
@@ -76,7 +76,9 @@ svg {
   padding-right: 10rem;
 }
 
-
+.footer-margin {
+  margin-top: 10rem
+}
 
 
 
