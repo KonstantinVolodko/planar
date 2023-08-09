@@ -1,6 +1,7 @@
 :root {
     --black: #000;
     --white: #FFF;
+    --blue: #2358D1;
 }
 
 @font-face {
@@ -631,6 +632,24 @@ img {
 
 svg {
     transition: all 0.1s linear;
+}
+
+.page-padding {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.page-margin {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.page-padding_left {
+    padding-left: 10rem;
+}
+
+.page-padding_right {
+    padding-right: 10rem;
 }
 
 .header {
@@ -1572,14 +1591,14 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
-.main__title-block {
+.main-title-block {
     position: relative;
     padding-left: 25.2rem;
     padding-top: 24.1rem;
     padding-bottom: 32rem;
 }
 
-.main__title-block img {
+.main-title-block img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1590,7 +1609,7 @@ button.swiper-pagination-bullet {
     top: 0;
 }
 
-.main__title-block h1 {
+.main-title-block h1 {
     color: var(--white);
     font-family: TT Firs Neue;
     font-size: 9.6rem;
@@ -1598,7 +1617,7 @@ button.swiper-pagination-bullet {
     line-height: 100%;
 }
 
-.main__title-block p {
+.main-title-block p {
     color: var(--white);
     font-family: Gilroy;
     font-size: 3.2rem;
@@ -1606,4 +1625,317 @@ button.swiper-pagination-bullet {
     line-height: 150%;
     width: 90.1rem;
     margin-top: 2.8rem;
+}
+
+.main-subtitle-block {
+    margin-top: 8rem;
+    position: relative;
+    padding-top: 12rem;
+    padding-bottom: 14.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-subtitle-block img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main-subtitle-block h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 100%;
+    width: 100rem;
+}
+
+.main-subtitle-block p {
+    color: var(--white);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 2.6rem;
+    width: 90rem;
+}
+
+.main-subtitle-block button {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 11.2rem;
+    background: transparent;
+    border: 0.1rem solid var(--white);
+    padding: 2.7rem 2rem;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 130%;
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-subtitle-block button svg {
+    width: 2.3rem;
+    height: 2rem;
+    fill: var(--white);
+}
+
+.main-calendar {
+    margin-top: 10rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    padding-top: 9.5rem;
+    padding-bottom: 11.7rem;
+    background: var(--blue);
+}
+
+.main-calendar__title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.main-calendar__title h2 {
+    color: var(--white);
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 100%;
+    width: 36.4rem;
+}
+
+.main-calendar__title a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 130%;
+    text-decoration: none;
+}
+
+.main-calendar__title a svg {
+    fill: var(--white);
+    width: 2.5rem;
+    height: 2rem;
+}
+
+.main-calendar__events {
+    margin-top: 6.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-calendar__events a {
+    text-decoration: none;
+}
+
+.main-calendar__img {
+    width: 100%;
+}
+
+.main-calendar__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.main-calendar__content {
+    padding-top: 1.3rem;
+    border: 0.1rem solid #FFF;
+    background: rgba(255, 255, 255, 0.1);
+    padding-bottom: 9.2rem;
+}
+
+.main-calendar__date {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.8rem;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.main-calendar__date p {
+    color: var(--white);
+    font-size: 3.2rem;
+}
+
+.main-calendar__date div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.main-calendar__date div p {
+    color: var(--white);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.main-calendar__date div p span {
+    color: #FFF;
+    font-size: 1.3rem;
+    line-height: initial;
+}
+
+.main-calendar__date div p:last-child {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.main-calendar__border {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+    height: 0.1rem;
+    background: var(--white);
+}
+
+.main-calendar__event-name {
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 130%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 2.5rem;
+}
+
+.main-tradition {
+    margin-top: 9.5rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 17.9rem;
+    padding-bottom: 20.2rem;
+}
+
+.main-tradition img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.main-tradition h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 100%;
+    width: 100rem;
+}
+
+.main-tradition button {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--white);
+    background: transparent;
+    margin-top: 6.9rem;
+}
+
+.main-news {
+    margin-top: 10rem;
+}
+
+.main-news__swiper {
+    width: 100%;
+}
+
+.main-news__swiper-content {
+    border: 0.1rem solid var(--black);
+}
+
+.main-news__swiper-img {
+    width: 100%;
+}
+
+.main-news__swiper-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.main-news__date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding-left: 4rem;
+}
+
+.main-news__date p {
+    color: var(--black);
+    font-size: 6.4rem;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.main-news__date p:last-child {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.main-news__border {
+    height: 0.1rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.main-news__news-name {
+    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-top: 3.6rem;
+    padding-bottom: 15rem;
+}
+
+.main-news__news-name p {
+    color: var(--black);
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 130%;
 }

@@ -54,9 +54,26 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
-
 svg {
   transition: all 0.1s linear;
+}
+
+.page-padding {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.page-margin {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.page-padding_left {
+  padding-left: 10rem;
+}
+
+.page-padding_right {
+  padding-right: 10rem;
 }
 
 
