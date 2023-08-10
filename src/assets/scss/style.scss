@@ -11,17 +11,17 @@ html {
   //   font-size: calc(100vw / 1600 * 10);
   // }
 
-  // @include breakpoint($cos-bp) {
-  //   font-size: calc(100vw / 1330 * 10);
-  // }
+  @include breakpoint($cos-bp) {
+    font-size: calc(100vw / 1330 * 10);
+  }
 
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
   }
 
-  @include breakpoint($jb-bp) {
-    font-size: calc(100vw / 850 * 10);
-  }
+  // @include breakpoint($jb-bp) {
+  //   font-size: calc(100vw / 850 * 10);
+  // }
 
   @include breakpoint($lb-bp) {
     font-size: calc(100vw / 650 * 10);
@@ -61,23 +61,50 @@ svg {
 .page-padding {
   padding-left: 10rem;
   padding-right: 10rem;
+
+  @include breakpoint($xl-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.page-padding-25 {
+  padding-left: 25rem;
+  padding-right: 25rem;
 }
 
 .page-margin {
   margin-left: 10rem;
   margin-right: 10rem;
+
+  @include breakpoint($xl-bp) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 .page-padding_left {
   padding-left: 10rem;
+
+  @include breakpoint($xl-bp) {
+    padding-left: 2rem;
+  }
 }
 
 .page-padding_right {
   padding-right: 10rem;
+
+  @include breakpoint($xl-bp) {
+    padding-right: 2rem;
+  }
 }
 
 .footer-margin {
-  margin-top: 10rem
+  margin-top: 10rem;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+  }
 }
 
 
@@ -86,4 +113,5 @@ svg {
 @import './blocks/swiper.scss';
 @import './blocks/footer.scss';
 @import './blocks/main.scss';
+@import './blocks/about-company.scss';
 

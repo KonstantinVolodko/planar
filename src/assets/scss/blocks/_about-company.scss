@@ -1,0 +1,131 @@
+.under-header-block {
+    padding-top: 3rem;
+    padding-bottom: 9.5rem;
+    background: linear-gradient(180deg, var(--blue) 0%, #00A4E0 100%);
+
+    .bread-crumbs {
+        display: flex;
+        gap: 0.8rem;
+
+        a,
+        p {
+            color: var(--white);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2rem;
+            text-decoration: none;
+        }
+
+        p {
+            opacity: 0.5;
+        }
+    }
+
+    h1 {
+        margin-top: 9rem;
+        color: var(--white);
+        font-size: 6.4rem;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0.64rem;
+    }
+}
+
+.about-company__description-block {
+    margin-top: 9.8rem;
+
+    h2 {
+        font-family: Gilroy;
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 130%;
+        color: var(--black);
+    }
+
+    p {
+        font-family: Gilroy;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--black);
+        margin-top: 2.4rem;
+    }
+}
+
+.about-company__story {
+    margin-top: 5.2rem;
+
+    h3 {
+        font-family: Gilroy;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 130%;
+        color: var(--black);
+    }
+
+    ul {
+        margin-top: 3.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                font-family: Gilroy;
+                font-size: 3.2rem;
+                font-weight: 700;
+                line-height: 130%;
+                color: var(--black);
+            }
+
+            p {
+                font-family: Gilroy;
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 130%;
+                color: var(--black);
+                max-width: 115.6rem;
+            }
+        }
+    }
+}
+
+
+.about-company__story.large {
+    ul {
+        li {
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    p:first-child {
+        width: 5rem;
+        height: 0.2rem;
+        background: var(--blue);
+    }
+
+    p:last-child {
+        max-width: 100%;
+    }
+}
+
+.about-company__story.count {
+    ul {
+        li {
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    p:first-child {
+        width: 5rem;
+    }
+
+    p:last-child {
+        max-width: 100%;
+    }
+}
