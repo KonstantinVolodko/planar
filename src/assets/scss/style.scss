@@ -27,7 +27,6 @@ html {
     font-size: calc(100vw / 650 * 10);
   }
 
-
   @include breakpoint($sm-bp) {
     font-size: calc(100vw / 375 * 10);
   }
@@ -44,8 +43,8 @@ html {
 }
 
 body {
-    font-family: TT Firs Neue;
-    font-style: normal;
+  font-family: TT Firs Neue;
+  font-style: normal;
 }
 
 
@@ -71,6 +70,11 @@ svg {
 .page-padding-25 {
   padding-left: 25rem;
   padding-right: 25rem;
+
+  @include breakpoint($cos-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .page-margin {
@@ -114,4 +118,12 @@ svg {
 @import './blocks/footer.scss';
 @import './blocks/main.scss';
 @import './blocks/about-company.scss';
-
+@import './blocks/management.scss';
+@import './blocks/anti-corruption.scss';
+@import './blocks/cooperation.scss';
+@import './blocks/products-all.scss';
+@import './blocks/services.scss';
+@import './blocks/product-card.scss';
+@import './blocks/news.scss';
+@import './blocks/scientific-activity.scss';
+@import './blocks/scientific-card.scss';

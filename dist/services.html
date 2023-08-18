@@ -166,111 +166,256 @@
         
         <main>
 
-            <!DOCTYPE html>
-            <html lang="en">
+            <div class="header">
+                <ul class="header__burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-            </head>
+                <div class="header__logo">
+                    <img src="./assets/images/logo.svg" alt="#">
+                </div>
             
-            <body>
-                <style>
-                    .rounded {
-                        counter-reset: li;
-                        list-style: none;
-                        font: 22px "Trebuchet MS", "Lucida Sans";
-                        padding: 0;
-                        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-                        width: 40%;
-                        margin: 0 auto;
-                        margin-top: 200px;
-                        margin-bottom: 200px;
-                    }
+                <ul class="header__menu">
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Планар</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Научная деятельность</a></li>
+                    <li><a href="#">Пресс-центр</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
             
-                    @media (max-width: 1024px) {
-                        .rounded {
-                        width: 80%;
-                        font: 18px "Trebuchet MS", "Lucida Sans";
-                        margin-top: 100px;
-                        }
-                    }
+                <div class="header__search-ico">
+                    <svg>
+                        <use href="#searchIco"></use>
+                    </svg>
+                </div>
             
-                    @media (max-width: 900px) {
-                        .rounded {
-                        width: 80%;
-                        font: 18px "Trebuchet MS", "Lucida Sans";
-                        }
-                    }
+                <div class="header__eye-ico">
+                    <svg>
+                        <use href="#eyeIco"></use>
+                    </svg>
+                </div>
             
-                    .rounded a {
-                        position: relative;
-                        display: block;
-                        padding: .4em .4em .4em 2em;
-                        margin: .5em 0;
-                        background: #DAD2CA;
-                        color: #444;
-                        text-decoration: none;
-                        border-radius: .3em;
-                        transition: .3s ease-out;
-                    }
+                <ul class="header__language">
+                    <li>
+                        <a href="#" class="active">RU</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="#">EN</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="#">中文</a>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <section class="under-header-block page-padding-25">
+                <div class="bread-crumbs">
+                    <a href="#">Главная</a>
+                    ·
+                    <a href="#">Планар</a>
+                    ·
+                    <p>Изготовление оптических компонентов</p>
+                </div>
             
-                    .rounded a:hover {
-                        background: #E9E4E0;
-                    }
+                <h1>Изготовление оптических компонентов</h1>
+            </section>
             
-                    li {
-                        transition: all 0.2s linear;
-                    }
+            <section class="about-company__description-block page-padding-25">
+                <h2>
+                    Обрудование для формирования и контроля топологических структур на фотошаблонах
+                </h2>
+                <p>
+                    Оборудование для формирования топологических структур на фотошаблонах включает генераторы изображений, установки
+                    автоматического контроля фотошаблонов, лазерные установки ремонта фотошаблонов, фотоповторители, а также большая
+                    группа контрольно-измерительного оборудования предназначенного для работы с фотошаблонами, включая установки
+                    контроля координат, контроля линейных размеров, фотометрического анализа пространственного изображения топологии
+                    и др.
+                </p>
+            </section>
             
-                    li:hover {
-                        transform: translate(-25px, 0%);
-                        transition: all 0.2s linear;
-                    }
+            <section class="about-company__story count page-padding-25">
+                <div class="about-company__story-count-title">
+                    <p>Комплекс оборудования для производства фотошаблонов, от одного разработчика, характеризуется следующими
+                        важнейшими преимуществами:</p>
+                </div>
             
-                    /* .rounded a:hover:before {
-                        transform: rotate(360deg);
-                    } */
+                <ul>
+                    <li>
+                        <p>1.</p>
+                        <p>
+                            сертификация системы менеджмента качества (СМК) проектирования, разработки, производства и технического
+                            обслуживания оптико-механического оборудования на соответствие требованиям
+                        </p>
+                    </li>
             
-                    .rounded a:before {
-                        content: counter(li);
-                        counter-increment: li;
-                        position: absolute;
-                        left: -1.3em;
-                        top: 50%;
-                        margin-top: -1.3em;
-                        background: #8FD4C1;
-                        height: 2em;
-                        width: 2em;
-                        line-height: 2em;
-                        border: .3em solid white;
-                        text-align: center;
-                        font-weight: bold;
-                        border-radius: 2em;
-                        transition: all .3s ease-out;
-                    }
-                </style>
-                <ol class="rounded">
-                    <li><a href="./main.html">Главная</a></li>
-                    <li><a href="./about-company.html">О компании</a></li>
-                    <li><a href="./anti-corruption.html">Противодействие коррупции</a></li>
-                    <li><a href="./management.html">Руководство</a></li>
-                    <li><a href="./purchases.html">Закупки</a></li>
-                    <li><a href="./quality.html">Политика качества</a></li>
-                    <li><a href="./cooperation.html">Кооперация</a></li>
-                    <li><a href="./product-card.html">Карточка товара</a></li>
-                    <li><a href="./product-all.html">Все товары</a></li>
-                    <li><a href="./services.html">Услуги</a></li>
-                    <li><a href="./news.html">Новости</a></li>
-                    <li><a href="./scientific-activity.html">Научная деятельность</a></li>
-                    <li><a href="./scientific-card.html">Научная карточка</a></li>
-                </ol>
-            </body>
+                    <li>
+                        <p>2.</p>
+                        <p>
+                            сертификация системы менеджмента качества (СМК) проектирования, разработки, производства и технического
+                            обслуживания оптико-механического оборудования на соответствие требованиям
+                        </p>
+                    </li>
             
-            </html>
-
+                    <li>
+                        <p>3.</p>
+                        <p>
+                            сертификация системы менеджмента качества (СМК) проектирования, разработки, производства и технического
+                            обслуживания оптико-механического оборудования на соответствие требованиям
+                        </p>
+                    </li>
+            
+                    <li>
+                        <p>4.</p>
+                        <p>
+                            сертификация системы менеджмента качества (СМК) проектирования, разработки, производства и технического
+                            обслуживания оптико-механического оборудования на соответствие требованиям
+                        </p>
+                    </li>
+            
+                    <li>
+                        <p>5.</p>
+                        <p>
+                            сертификация системы менеджмента качества (СМК) проектирования, разработки, производства и технического
+                            обслуживания оптико-механического оборудования на соответствие требованиям
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            
+            <ul class="services-table">
+                <li>
+                    <p>Должность (профессия)</p>
+                    <p>Заработная плата, бел. руб.</p>
+                </li>
+            
+                <li>
+                    <p>Инженер-электроник</p>
+                    <p>1800</p>
+                </li>
+            
+                <li>
+                    <p>Шлифовщик 5-6 разряда (твердокаменные породы)</p>
+                    <p>3000 - 3200</p>
+                </li>
+            
+                <li>
+                    <p>Инженер-электроник</p>
+                    <p>1800</p>
+                </li>
+            
+                <li>
+                    <p>Шлифовщик 5-6 разряда (твердокаменные породы)</p>
+                    <p>3000 - 3200</p>
+                </li>
+            
+                <li>
+                    <p>Инженер-электроник</p>
+                    <p>1800</p>
+                </li>
+            
+                <li>
+                    <p>Шлифовщик 5-6 разряда (твердокаменные породы)</p>
+                    <p>3000 - 3200</p>
+                </li>
+            </ul>
+            
+            <div class="footer-margin"></div>
+            
+            <div class="footer">
+                <div class="footer-top-container">
+                    <ul>
+                        <li>
+                            <div class="footer__logo">
+                                <img src="./assets/images/logo.svg" alt="#">
+                            </div>
+                        </li>
+                        <li>
+                            Партизанский пр. 2, корп. 2-31 220033, г. Минск, РБ
+                        </li>
+                    </ul>
+            
+                    <ul>
+                        <li>Приемная
+                            <ul>
+                                <li><a href="#">Тел.: +375 (17) 297-37-09</a></li>
+                                <li><a href="#">Факс: +375 (17) 226-12-05</a></li>
+                                <li><a href="#">e-mail: office@kbtem-omo.by</a></li>
+                            </ul>
+                        </li>
+            
+                        <li>
+                            <ul>
+                                <li><a href="#">Карьера в ОАО «Планар»</a></li>
+                                <li><a href="#">Целевой прием в 2023 году</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            
+                    <ul>
+                        <li><a href="#">Планар</a></li>
+                        <li><a href="#">Продукция</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Научная деятельность</a></li>
+                        <li><a href="#">Пресс-центр</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+            
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="active">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">中文</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <img src="./assets/images/rb.png" alt="#">
+                                    </div>
+                                    <a href="#">Сайт Президента РБ</a>
+                                </li>
+            
+                                <li>
+                                    <div>
+                                        <img src="./assets/images/promRb.png" alt="#">
+                                    </div>
+                                    <a href="#">Министерство промышленности РБ</a>
+                                </li>
+            
+                                <li>
+                                    <div>
+                                        <img src="./assets/images/pravoRb.png" alt="#">
+                                    </div>
+                                    <a href="#">Национальный правовой портал РБ</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            
+                <div class="footer-bottom-container">
+                    <ul>
+                        <li><a href="#">Политика обработки персональных данных</a></li>
+                        <li>Copyright © 2023 Планар Все права защищены.</li>
+                    </ul>
+            
+                    <a href="#">Карта сайта</a>
+            
+                    <a href="#">
+                        Разработка сайта
+                        <svg>
+                            <use href="#scrollLogo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </main>
 
     </div>

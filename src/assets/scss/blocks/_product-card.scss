@@ -1,0 +1,28 @@
+.product-card__tab {
+    margin-top: 6rem;
+
+}
+
+.product-card__tab-btn-container {
+    display: flex;
+}
+
+.product-card__tab-btn {
+    font-family: Gilroy;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 130%;
+    padding: 2rem 3rem;
+    border: 0.1rem solid var(--black);
+    border-top: none;
+    background: rgba(0, 0, 0, 0.10);
+
+    &.active {
+        color: var(--white);
+        background: var(--blue);
+    }
+}
+
+.product-card__hidden-content {
+    display: none;
+}

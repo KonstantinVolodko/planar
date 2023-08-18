@@ -1,0 +1,138 @@
+.products {
+    margin-top: 10rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.products__panel {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 3rem;
+}
+
+.products__sub-panel {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.expanded {
+    max-height: 100rem;
+}
+
+.products__accordion {
+    color: var(--black);
+    font-family: Gilroy;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 130%;
+    background: none;
+    border: none;
+    width: 34rem;
+    text-align: left;
+    margin-top: 3rem;
+
+    &.active {
+        color: var(--blue);
+    }
+}
+
+.products__sub-accordion {
+    color: var(--black);
+    font-family: Gilroy;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 130%;
+    background: none;
+    border: none;
+    margin-top: 1.5rem;
+    text-align: left;
+
+    &.active {
+        color: var(--blue);
+    }
+}
+
+.products__sub-panel {
+    padding-left: 3rem;
+
+    li {
+        margin-top: 1.5rem;
+    }
+
+    a {
+        color: var(--black);
+        font-family: Gilroy;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 130%;
+        text-decoration: none;
+    }
+
+}
+
+
+.products__content {
+
+    .products__content-catalog {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 35rem;
+
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                padding: 2.5rem;
+                border: 0.1rem solid var(--black);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                p {
+                    color: var(--black);
+                    font-family: Gilroy;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+
+    .about-company__story {
+
+        .about-company__story-count-title {
+            p {
+                font-family: Gilroy;
+                font-size: 2.4rem;
+                font-weight: 600;
+                line-height: 150%;
+                width: unset;
+            }
+        }
+
+        ul {
+
+            li {
+                width: unset;
+            }
+        }
+    }
+}
+
+.product-card__img {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -3,16 +3,23 @@
     padding-bottom: 9.5rem;
     background: linear-gradient(180deg, var(--blue) 0%, #00A4E0 100%);
 
+    @include breakpoint($sm-bp) {
+        padding-bottom: 3rem;
+    }
+
     .bread-crumbs {
         display: flex;
+        flex-wrap: wrap;
         gap: 0.8rem;
 
-        a,
-        p {
+        color: var(--white);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2rem;
+        text-decoration: none;
+
+        a {
             color: var(--white);
-            font-size: 1.6rem;
-            font-weight: 400;
-            line-height: 2rem;
             text-decoration: none;
         }
 
@@ -28,11 +35,22 @@
         font-weight: 600;
         line-height: 100%;
         letter-spacing: 0.64rem;
+
+        @include breakpoint($sm-bp) {
+            font-size: 3.7rem;
+            letter-spacing: 100%;
+            margin-top: 3rem;
+            letter-spacing: normal;
+        }
     }
 }
 
 .about-company__description-block {
     margin-top: 9.8rem;
+
+    @include breakpoint($sm-bp) {
+        margin-top: 4rem;
+    }
 
     h2 {
         font-family: Gilroy;
@@ -40,6 +58,11 @@
         font-weight: 700;
         line-height: 130%;
         color: var(--black);
+
+        @include breakpoint($sm-bp) {
+            font-size: 3.4rem;
+            line-height: 110%;
+        }
     }
 
     p {
@@ -49,6 +72,11 @@
         line-height: 150%;
         color: var(--black);
         margin-top: 2.4rem;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            line-height: 130%;
+        }
     }
 }
 
@@ -73,6 +101,11 @@
             display: flex;
             justify-content: space-between;
 
+            @include breakpoint($lb-bp) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
             a {
                 font-family: Gilroy;
                 font-size: 3.2rem;
@@ -88,6 +121,19 @@
                 line-height: 130%;
                 color: var(--black);
                 max-width: 115.6rem;
+
+                @include breakpoint($xl-bp) {
+                    max-width: 81.6rem;
+                }
+
+                @include breakpoint($lb-bp) {
+                    max-width: 100%;
+                }
+
+                @include breakpoint($sm-bp) {
+                    font-size: 1.8rem;
+                    line-height: 130%;
+                }
             }
         }
     }
@@ -127,5 +173,208 @@
 
     p:last-child {
         max-width: 100%;
+    }
+}
+
+.about-company__sertificate-block {
+    position: relative;
+    margin-top: 9rem;
+
+    @include breakpoint($cos-bp) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        margin-top: 4rem;
+    }
+
+    button {
+        position: absolute;
+        background: none;
+        border: 0.1rem solid var(--black);
+        width: 12rem;
+        height: 12rem;
+        top: 23rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint($cos-bp) {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            width: 4rem;
+            height: 4rem;
+            top: 15rem;
+        }
+
+        svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.6;
+    }
+}
+
+.about-company__sertificate-swiper {
+    width: 100%;
+}
+
+.about-company__arrow-next {
+    right: 13.2rem;
+
+    @include breakpoint($cos-bp) {
+        right: 2rem;
+    }
+}
+
+.about-company__arrow-prev {
+    left: 13.1rem;
+    rotate: 180deg;
+
+    @include breakpoint($cos-bp) {
+        left: 2.1rem;
+    }
+}
+
+.about-company__swiper-slide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint($sm-bp) {
+        gap: 2rem;
+    }
+
+    p {
+        font-family: Gilroy;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 130%;
+        color: var(--black);
+    }
+}
+
+.about-company__slide-img {
+    border: 0.1rem solid var(--black);
+    display: block;
+    padding: 2rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-company__swiper-borderline {
+    height: 0.1rem;
+    background: var(--black);
+}
+
+.download-links {
+    margin-top: 6.2rem;
+
+    @include breakpoint($xl-bp) {
+        margin-top: 4rem;
+    }
+
+    li {
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 2.8rem 3.2rem;
+            border-top: 0.1rem solid var(--black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint($lb-bp) {
+                padding: 2rem 0rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+
+    li:last-child {
+        a {
+            border-bottom: 0.1rem solid var(--black);
+        }
+    }
+
+    svg:first-child {
+        width: 3rem;
+        height: 4.3rem;
+    }
+
+    svg:last-child {
+        width: 3rem;
+        height: 3.4rem;
+        margin-left: 11.8rem;
+
+        @include breakpoint($lb-bp) {
+            margin-left: 3rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            margin-left: 0rem;
+        }
+    }
+
+    p {
+        font-family: Gilroy;
+        color: var(--black);
+
+        @include breakpoint($sm-bp) {
+            text-align: center;
+        }
+    }
+
+    div {
+        margin-left: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+        }
+
+        p:first-of-type {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 130%;
+
+        }
+
+        p:last-of-type {
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.about-company__story-count-title {
+    p {
+        font-family: Gilroy;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 150%;
+        width: unset !important;
     }
 }

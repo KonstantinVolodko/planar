@@ -1,0 +1,45 @@
+.services-table {
+    width: 106rem;
+    margin: 0 auto;
+    margin-top: 6.6rem;
+
+    li {
+        display: flex;
+        border-bottom: 0.1rem solid var(--black);
+
+        p {
+            padding-left: 3rem;
+            padding-top: 2.7rem;
+            padding-bottom: 2.7rem;
+
+            font-family: Gilroy;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 130%;
+        }
+
+        p:first-child {
+            width: 70%;
+        }
+
+        p:last-child {
+            width: 30%;
+            border-left: 0.1rem solid var(--black);
+            font-family: Gilroy;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 130%;
+        }
+    }
+
+    li:first-child {
+        background: #E6E6E6;
+
+        p {
+            font-family: Gilroy;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 130%;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.warning-letter {
+    background: #E6E6E6;
+    width: 118.2rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 3rem 4rem 3rem;
+    margin-top: 11rem;
+    justify-content: space-between;
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    @include breakpoint($lb-bp) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    p {
+        font-family: Gilroy;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 150%;
+
+        max-width: 97.8rem;
+
+        @include breakpoint($xl-bp) {
+            max-width: 80rem;
+        }
+
+        @include breakpoint($lb-bp) {
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+.warning-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--blue);
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--blue);
+}
