@@ -1,0 +1,160 @@
+.contacts {
+    margin-top: 9.5rem;
+
+    @include breakpoint($lb-bp) {
+        margin-top: 5rem;
+    }
+}
+
+.contacts__content {
+    display: flex;
+    gap: 2rem;
+
+    @include breakpoint($lb-bp) {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+.contacts__content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.contacts__content-list-inner {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        p:first-child {
+            font-family: Gilroy;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        p:last-child,
+        a:last-child {
+            font-family: Gilroy;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 150%;
+            width: 60%;
+            color: var(--black);
+            text-decoration: none;
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
+        }
+
+        a {
+            background-image: linear-gradient(to right,
+                    var(--blue),
+                    var(--blue) 50%,
+                    var(--black) 50%);
+            background-size: 200% 100%;
+            background-position: 100%;
+            position: relative;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-position: 0;
+            }
+        }
+    }
+
+}
+
+.contacts__content-border {
+    height: 0.1rem;
+    width: 100%;
+    background: var(--black);
+}
+
+.contacts__content-map {
+    width: 85rem;
+    height: 60rem;
+
+    @include breakpoint($lb-bp) {
+        width: 100%;
+        height: 30rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.contacts__content-list-other {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 6rem;
+    margin-top: 8.4rem;
+
+    @include breakpoint($lb-bp) {
+        row-gap: 5rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        margin-top: 4.5rem;
+    }
+
+    h2 {
+        font-family: Gilroy;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 130%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 3.2rem;
+        }
+    }
+
+    .contacts__content-list-description {
+        font-family: Gilroy;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 130%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .contacts__content-border {
+        margin-top: 2.4rem;
+        margin-bottom: 3.8rem;
+    }
+
+    li {
+        width: 69.8rem;
+
+        @include breakpoint($cos-bp) {
+            width: 62rem;
+        }
+
+        @include breakpoint($xl-bp) {
+            width: 47rem;
+        }
+
+        @include breakpoint($lb-bp) {
+            width: 100%;
+        }
+    }
+}

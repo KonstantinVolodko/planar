@@ -1,26 +1,126 @@
 <div class="header">
-    <ul class="header__burger">
+    <ul class="header__burger" id="burgerButton">
         <li></li>
         <li></li>
         <li></li>
     </ul>
 
-    <div class="header__logo">
+    <a href="#" class="header__logo">
         <img src="./assets/images/logo.svg" alt="#">
-    </div>
+    </a>
 
     <ul class="header__menu">
-        <li><a href="#">Продукция</a></li>
-        <li><a href="#">Планар</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Научная деятельность</a></li>
-        <li><a href="#">Пресс-центр</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li>
+            <button>
+                Продукция
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
+        <li>
+            <button>
+                Планар
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
+        <li>
+            <button>
+                Услуги
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
+        <li>
+            <button>
+                Научная деятельность
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
+        <li>
+            <button>
+                Пресс-центр
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
+        <li>
+            <button>
+                Контакты
+                <svg>
+                    <use href="#arrow"></use>
+                </svg>
+                <i class="arrow"></i>
+            </button>
+            <ul>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+                <li><a href="#">Оборудование для производства фотошаблонов</a></li>
+            </ul>
+        </li>
     </ul>
 
     <div class="header__search-ico">
         <svg>
             <use href="#searchIco"></use>
+        </svg>
+
+        <svg>
+            <use href="#searchCross"></use>
         </svg>
     </div>
 
@@ -44,4 +144,33 @@
             <div></div>
         </li>
     </ul>
+</div>
+
+<div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+        <span class="close">
+            <svg>
+                <use href="#searchCross"></use>
+            </svg>
+        </span>
+        <form action="#">
+            <input type="text" name="search" placeholder="Введите поисковый запрос">
+            <button type="submit">
+                <svg>
+                    <use href="#searchIco"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div id="burger-menu" class="burger-menu">
+    <div class="burger-menu-content">
+        <ul class="burger-menu-content__first-list">
+
+        </ul>
+
+        <ul class="burger-menu-content__second-list">
+        </ul>
+    </div>
 </div>

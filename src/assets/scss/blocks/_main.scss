@@ -10,13 +10,14 @@
     }
 
     @include breakpoint($xl-bp) {
-        padding-left: 2rem;
+        padding-left: 3rem;
         padding-top: 4rem;
-        padding-right: 2rem;
+        padding-right: 3rem;
     }
 
     @include breakpoint($sm-bp) {
-        padding-bottom: 4rem;
+        padding-top: 15rem;
+        padding-bottom: 8.4rem;
     }
 
     img {
@@ -35,9 +36,11 @@
         font-size: 9.6rem;
         font-weight: 600;
         line-height: 100%;
+        min-height: 9.6rem;
 
         @include breakpoint($sm-bp) {
-            font-size: 3.4rem;
+            font-size: 4rem;
+            min-height: 4rem;
         }
     }
 
@@ -55,8 +58,9 @@
         }
 
         @include breakpoint($sm-bp) {
-            font-size: 2.2rem;
-            line-height: 120%;
+            font-size: 1.6rem;
+            line-height: 150%;
+            margin-top: 1.2rem;
         }
     }
 }
@@ -71,16 +75,16 @@
     align-items: center;
 
     @include breakpoint($xl-bp) {
-        margin-left: 0rem;
-        margin-right: 0rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
     @include breakpoint($sm-bp) {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        margin-top: 4rem;
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+        margin-top: 3rem;
     }
 
     img {
@@ -107,7 +111,7 @@
         }
 
         @include breakpoint($sm-bp) {
-            font-size: 3.4rem;
+            font-size: 3.6rem;
         }
     }
 
@@ -126,8 +130,8 @@
         }
 
         @include breakpoint($sm-bp) {
-            font-size: 2.2rem;
-            line-height: 120%;
+            font-size: 1.6rem;
+            line-height: 150%;
         }
     }
 
@@ -137,7 +141,7 @@
         gap: 11.2rem;
         background: transparent;
         border: 0.1rem solid var(--white);
-        padding: 2.7rem 2rem;
+        padding: 2.7rem 3rem;
         color: var(--white);
         font-size: 2rem;
         font-weight: 600;
@@ -145,10 +149,16 @@
         margin-top: 6rem;
         margin-left: auto;
         margin-right: auto;
+        transition: all 0.2s linear;
+
+        &:hover {
+            background: var(--blue);
+        }
 
         @include breakpoint($sm-bp) {
-            margin-top: 2.6rem;
-            padding: 1.5rem 1rem;
+            margin-top: 4.3rem;
+            padding: 2rem 2rem;
+            font-size: 1.6rem;
         }
 
         svg {
@@ -176,7 +186,9 @@
 
     @include breakpoint($sm-bp) {
         margin-top: 4rem;
-        padding: 4rem 2rem;
+        padding: 4rem 3rem;
+        padding-top: 6.9rem;
+        padding-bottom: 7rem;
     }
 }
 
@@ -185,10 +197,6 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    @include breakpoint($sm-bp) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
     h2 {
         color: var(--white);
@@ -198,8 +206,8 @@
         width: 36.4rem;
 
         @include breakpoint($sm-bp) {
-            width: 100%;
-            font-size: 3.4rem;
+            width: 50%;
+            font-size: 4rem;
         }
     }
 
@@ -213,14 +221,35 @@
         line-height: 130%;
         text-decoration: none;
 
+        background-image: linear-gradient(to right,
+                var(--black),
+                var(--black) 50%,
+                var(--white) 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-position: 0;
+
+            svg {
+                fill: var(--black);
+            }
+        }
+
         @include breakpoint($sm-bp) {
             margin-top: 2rem;
+            font-size: 1.6rem;
         }
 
         svg {
             fill: var(--white);
             width: 2.5rem;
             height: 2rem;
+            transition: all 0.3s ease-in-out;
         }
     }
 }
@@ -242,8 +271,23 @@
         margin-top: 4rem;
     }
 
+    li {
+        // transform-origin: 50% 50%;
+        // transform: rotateY(180deg);
+
+        &:hover {
+
+            a {
+                scale: 1.02;
+            }
+        }
+    }
+
     a {
         text-decoration: none;
+        transition: all 0.2s linear;
+
+
     }
 }
 
@@ -367,8 +411,10 @@
 
     @include breakpoint($sm-bp) {
         margin-top: 4rem;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 7rem;
+        padding-bottom: 12rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     img {
@@ -394,7 +440,7 @@
         }
 
         @include breakpoint($sm-bp) {
-            font-size: 3.4rem;
+            font-size: 3.6rem;
         }
     }
 
@@ -405,11 +451,33 @@
         border: 0.1rem solid var(--white);
         background: transparent;
         margin-top: 6.9rem;
+        transition: all 0.2s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            scale: 1.1;
+        }
 
         @include breakpoint($sm-bp) {
-            margin-top: 4rem;
+            margin-top: 8rem;
             width: 10rem;
             height: 10rem;
+        }
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            fill: transparent;
+            stroke: var(--white);
+            margin-left: 1.5rem;
+
+            @include breakpoint($sm-bp) {
+                width: 3rem;
+                height: 3rem;
+                margin-left: 1rem;
+            }
         }
     }
 }
@@ -425,12 +493,12 @@
     }
 
     @include breakpoint($xl-bp) {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     @include breakpoint($sm-bp) {
-        margin-top: 4rem;
+        margin-top: 6.6rem;
     }
 }
 
@@ -439,11 +507,9 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    @include breakpoint($sm-bp) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2rem;
-    }
+    // @include breakpoint($sm-bp) {
+
+    // }
 
     h2 {
         color: var(--black);
@@ -452,7 +518,8 @@
         line-height: 100%;
 
         @include breakpoint($sm-bp) {
-            font-size: 3.6rem;
+            font-size: 4rem;
+            line-height: 100%;
         }
     }
 
@@ -465,10 +532,37 @@
         display: flex;
         gap: 2rem;
 
+        background-image: linear-gradient(to right,
+                var(--black),
+                var(--black) 50%,
+                var(--blue) 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-position: 0;
+
+            svg {
+                fill: var(--black);
+            }
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            line-height: 130%;
+        }
+
         svg {
             fill: var(--blue);
             width: 2.5rem;
             height: 2rem;
+            transition: all 0.3s ease-in-out;
+
+
         }
     }
 }
@@ -477,6 +571,18 @@
     display: flex;
     gap: 3rem;
     margin-top: 3.9rem;
+
+    li {
+        // transform-origin: 50% 50%;
+        // transform: rotateY(180deg);
+
+        &:last-child {
+
+            a {
+                border-bottom: 0.1rem solid var(--black);
+            }
+        }
+    }
 
     @include breakpoint($xl-bp) {
         gap: 1rem;
@@ -490,7 +596,21 @@
         border: 0.1rem solid var(--black);
         text-decoration: none;
         display: block;
+        transition: all 0.2s linear;
+
+        @include breakpoint($lb-bp) {
+            border-bottom: none;
+        }
+
+        &:hover {
+            scale: 1.02;
+        }
+
+
     }
+
+
+
 }
 
 .main-news__img {
@@ -510,8 +630,8 @@
 
 .main-news__date {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
+    // align-items: center;
+    gap: 1.5rem;
     padding-left: 4rem;
 
     @include breakpoint($sm-bp) {
@@ -525,7 +645,7 @@
         line-height: 130%;
 
         @include breakpoint($sm-bp) {
-            font-size: 4.4rem;
+            font-size: 6.4rem;
         }
 
     }
@@ -534,6 +654,12 @@
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
+        margin-top: 1.2rem;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.5rem;
+            line-height: 130%;
+        }
 
         // @include breakpoint($cos-bp) {
         //     font-size: 2rem;
@@ -566,7 +692,7 @@
     }
 
     @include breakpoint($sm-bp) {
-        padding: 1rem 2rem 2rem 2rem;
+        padding: 2.4rem 2rem 2rem 2rem;
     }
 
     p {
@@ -579,5 +705,26 @@
             font-size: 2.4rem;
             line-height: 120%;
         }
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.1rem;
+    height: 100%;
+    background-color: var(--black);
+    animation: blinking-cursor 1s infinite;
+    margin-left: 0.2rem;
+}
+
+@keyframes blinking-cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
     }
 }

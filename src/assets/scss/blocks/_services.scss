@@ -3,9 +3,30 @@
     margin: 0 auto;
     margin-top: 6.6rem;
 
+    @include breakpoint($cos-bp) {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        width: 86rem;
+    }
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        border-top: 0.1rem solid var(--black);
+    }
+
     li {
         display: flex;
         border-bottom: 0.1rem solid var(--black);
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+            padding-top: 1.8rem;
+            padding-bottom: 1.6rem;
+        }
 
         p {
             padding-left: 3rem;
@@ -16,10 +37,18 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 130%;
+
+            @include breakpoint($sm-bp) {
+                padding: 0rem;
+            }
         }
 
         p:first-child {
             width: 70%;
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
         }
 
         p:last-child {
@@ -29,11 +58,25 @@
             font-size: 2rem;
             font-weight: 700;
             line-height: 130%;
+
+            @include breakpoint($cos-bp) {
+                padding-right: 1rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                border-left: none;
+                width: 100%;
+            }
         }
     }
 
     li:first-child {
         background: #E6E6E6;
+
+        @include breakpoint($sm-bp) {
+            display: none;
+
+        }
 
         p {
             font-family: Gilroy;
@@ -41,5 +84,17 @@
             font-weight: 700;
             line-height: 130%;
         }
+    }
+}
+
+.services-modify {
+    @include breakpoint($cos-bp) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint($xl-bp) {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }

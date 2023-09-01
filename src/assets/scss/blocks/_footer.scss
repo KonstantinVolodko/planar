@@ -13,6 +13,12 @@
 
 .footer__logo {
     width: 20rem;
+    display: block;
+    transition: all 0.2s linear;
+
+    &:hover {
+        opacity: 0.8;
+    }
 
     img {
         width: 100%;
@@ -32,8 +38,8 @@
     }
 
     @include breakpoint($sm-bp) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4);
+        display: flex;
+        flex-direction: column;
     }
 
     ul:first-child {
@@ -86,6 +92,22 @@
 
             a {
                 text-decoration: none;
+                
+
+                background-image: linear-gradient(to right,
+                        var(--blue),
+                        var(--blue) 50%,
+                        var(--black) 50%);
+                background-size: 200% 100%;
+                background-position: 100%;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-position: 0;
+                }
             }
 
             ul {
@@ -100,6 +122,8 @@
                         font-size: 1.8rem;
                         font-weight: 500;
                         line-height: 180%;
+
+
 
                         // @include breakpoint($cos-bp) {
                         //     font-size: 2.1rem;
@@ -143,6 +167,22 @@
                         font-weight: 600;
                         line-height: 130%;
                         text-decoration: underline;
+                        border-bottom: 0.1rem solid var(--black);
+
+                        background-image: linear-gradient(to right,
+                                var(--blue),
+                                var(--blue) 50%,
+                                var(--black) 50%);
+                        background-size: 200% 100%;
+                        background-position: 100%;
+                        position: relative;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-position: 0;
+                        }
                     }
                 }
 
@@ -161,7 +201,7 @@
         gap: 2.4rem;
 
         @include breakpoint($xl-bp) {
-            grid-area: 3 / 1 / 4 / 3;
+            grid-area: 2 / 2 / 4 / 3;
             margin-top: 3rem;
             gap: 1.5rem;
         }
@@ -177,6 +217,22 @@
                 font-size: 2rem;
                 font-weight: 600;
                 line-height: 130%;
+                border-bottom: 0.1rem solid var(--black);
+
+                background-image: linear-gradient(to right,
+                        var(--blue),
+                        var(--blue) 50%,
+                        var(--black) 50%);
+                background-size: 200% 100%;
+                background-position: 100%;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-position: 0;
+                }
             }
         }
     }
@@ -208,10 +264,29 @@
                     font-size: 2rem;
                     font-weight: 500;
                     line-height: 2rem;
+
+                    background-image: linear-gradient(to right,
+                            var(--blue),
+                            var(--blue) 50%,
+                            #898989 50%);
+                    background-size: 200% 100%;
+                    background-position: 100%;
+                    position: relative;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-position: 0;
+                    }
                 }
 
                 a.active {
                     color: var(--black);
+                    background-image: linear-gradient(to right,
+                            var(--blue),
+                            var(--blue) 50%,
+                            var(--black) 50%);
                 }
 
                 li:last-child {
@@ -257,6 +332,22 @@
                         font-size: 1.6rem;
                         font-weight: 500;
                         line-height: 100%;
+                        border-bottom: 0.1rem solid var(--black);
+
+                        background-image: linear-gradient(to right,
+                                var(--blue),
+                                var(--blue) 50%,
+                                var(--black) 50%);
+                        background-size: 200% 100%;
+                        background-position: 100%;
+                        position: relative;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-position: 0;
+                        }
                     }
                 }
 
@@ -274,15 +365,29 @@
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
     @include breakpoint($xl-bp) {
         flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    ul:first-child {
+        li:first-child {
+            a {
+                border-bottom: 0.1rem solid var(--black);
+            }
+        }
     }
 
     ul {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
+
+        @include breakpoint($sm-bp) {
+            order: 2;
+        }
 
         li {
             color: var(--black);
@@ -294,6 +399,22 @@
             a {
                 color: var(--black);
                 text-decoration: underline;
+                border-bottom: 0.1rem solid var(--black);
+
+                background-image: linear-gradient(to right,
+                        var(--blue),
+                        var(--blue) 50%,
+                        var(--black) 50%);
+                background-size: 200% 100%;
+                background-position: 100%;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-position: 0;
+                }
             }
         }
     }
@@ -305,6 +426,23 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+        border-bottom: 0.1rem solid var(--black);
+        height: fit-content;
+
+        background-image: linear-gradient(to right,
+                var(--blue),
+                var(--blue) 50%,
+                var(--black) 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-position: 0;
+        }
 
         @include breakpoint($cos-bp) {
             margin-left: 8.5rem;
@@ -319,6 +457,11 @@
     a:last-of-type {
         text-decoration: none;
         margin-left: 0rem;
+        border-bottom: none;
+
+        @include breakpoint($sm-bp) {
+            order: 3;
+        }
 
         svg {
             width: 8.5rem;

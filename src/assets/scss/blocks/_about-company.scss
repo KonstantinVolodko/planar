@@ -4,13 +4,15 @@
     background: linear-gradient(180deg, var(--blue) 0%, #00A4E0 100%);
 
     @include breakpoint($sm-bp) {
-        padding-bottom: 3rem;
+        padding-bottom: 8.2rem;
     }
 
     .bread-crumbs {
         display: flex;
-        flex-wrap: wrap;
         gap: 0.8rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        
 
         color: var(--white);
         font-size: 1.6rem;
@@ -18,9 +20,21 @@
         line-height: 2rem;
         text-decoration: none;
 
+        @include breakpoint($xl-bp) {
+            overflow-x: scroll;
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.4rem;
+        }
+
         a {
             color: var(--white);
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         p {
@@ -34,12 +48,15 @@
         font-size: 6.4rem;
         font-weight: 600;
         line-height: 100%;
-        letter-spacing: 0.64rem;
+
+        @include breakpoint($lb-bp) {
+            font-size: 4rem;
+        }
 
         @include breakpoint($sm-bp) {
-            font-size: 3.7rem;
+            font-size: 4rem;
             letter-spacing: 100%;
-            margin-top: 3rem;
+            margin-top: 6.2rem;
             letter-spacing: normal;
         }
     }
@@ -48,7 +65,7 @@
 .about-company__description-block {
     margin-top: 9.8rem;
 
-    @include breakpoint($sm-bp) {
+    @include breakpoint($xl-bp) {
         margin-top: 4rem;
     }
 
@@ -60,7 +77,7 @@
         color: var(--black);
 
         @include breakpoint($sm-bp) {
-            font-size: 3.4rem;
+            font-size: 3.2rem;
             line-height: 110%;
         }
     }
@@ -74,14 +91,18 @@
         margin-top: 2.4rem;
 
         @include breakpoint($sm-bp) {
-            font-size: 1.8rem;
-            line-height: 130%;
+            font-size: 1.6rem;
+            line-height: 150%;
         }
     }
 }
 
 .about-company__story {
     margin-top: 5.2rem;
+
+    @include breakpoint($sm-bp) {
+        margin-top: 3.8rem;
+    }
 
     h3 {
         font-family: Gilroy;
@@ -96,6 +117,10 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
+
+        @include breakpoint($lb-bp) {
+            gap: 5rem;
+        }
 
         li {
             display: flex;
@@ -112,6 +137,28 @@
                 font-weight: 700;
                 line-height: 130%;
                 color: var(--black);
+                text-decoration: underline;
+                height: fit-content;
+                border-bottom: 0.3rem solid var(--blue);
+
+                background-image: linear-gradient(to right,
+                        var(--blue),
+                        var(--blue) 50%,
+                        var(--black) 50%);
+                background-size: 200% 100%;
+                background-position: 100%;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+
+                @include breakpoint($lb-bp) {
+                    width: fit-content;
+                }
+
+                &:hover {
+                    background-position: 0;
+                }
             }
 
             p {
@@ -131,7 +178,7 @@
                 }
 
                 @include breakpoint($sm-bp) {
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     line-height: 130%;
                 }
             }
@@ -152,6 +199,11 @@
         width: 5rem;
         height: 0.2rem;
         background: var(--blue);
+        margin-top: 1rem;
+
+        @include breakpoint($lb-bp) {
+            width: 2.5rem;
+        }
     }
 
     p:last-child {
@@ -164,11 +216,20 @@
         li {
             display: flex;
             gap: 3rem;
+
+            @include breakpoint($lb-bp) {
+                flex-direction: initial;
+                gap: 1.5rem;
+            }
         }
     }
 
     p:first-child {
         width: 5rem;
+
+        @include breakpoint($lb-bp) {
+            margin-top: 0.4rem;
+        }
     }
 
     p:last-child {
@@ -201,6 +262,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s linear;
+        border-left: none;
+
+        &:hover {
+            background: var(--blue);
+
+            svg {
+                fill: var(--white);
+            }
+        }
 
         @include breakpoint($cos-bp) {
             width: 8rem;
@@ -210,12 +281,13 @@
         @include breakpoint($sm-bp) {
             width: 4rem;
             height: 4rem;
-            top: 15rem;
+            top: 22rem;
         }
 
         svg {
             width: 2.5rem;
             height: 2.5rem;
+            transition: all 0.3s linear;
         }
     }
 
@@ -237,7 +309,7 @@
 }
 
 .about-company__arrow-prev {
-    left: 13.1rem;
+    left: 13rem;
     rotate: 180deg;
 
     @include breakpoint($cos-bp) {
@@ -297,14 +369,19 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background: rgba(0, 0, 0, .1);
+            }
 
             @include breakpoint($lb-bp) {
                 padding: 2rem 0rem;
             }
 
             @include breakpoint($sm-bp) {
-                flex-direction: column;
                 gap: 2rem;
+                align-items: flex-start;
             }
         }
     }
@@ -353,6 +430,8 @@
 
         @include breakpoint($sm-bp) {
             flex-direction: column;
+            gap: 0.7rem;
+            align-items: baseline;
         }
 
         p:first-of-type {
@@ -360,6 +439,10 @@
             font-weight: 600;
             line-height: 130%;
 
+            @include breakpoint($sm-bp) {
+                text-align: start;
+                font-size: 1.6rem;
+            }
         }
 
         p:last-of-type {

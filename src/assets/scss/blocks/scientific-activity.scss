@@ -2,12 +2,37 @@
     margin-top: 10rem;
 
     li {
+
+        &:hover {
+
+            a {
+                background: rgba(0, 0, 0, .1);
+            }
+        }
+
         a {
             text-decoration: none;
             padding: 4rem 5rem;
             border-top: 0.1rem solid var(--black);
             display: flex;
             gap: 5rem;
+            transition: all 0.2s linear;
+            overflow: hidden;
+
+            .products__content-catalog-border {
+                @include breakpoint($lb-bp) {
+                    width: 100%;
+                    height: 0.2rem;
+                    background-color: rgba(0, 0, 0, 0.50);
+                    margin-left: 3rem;
+                }
+            }
+
+            @include breakpoint($lb-bp) {
+                flex-direction: column;
+                padding: 1.6rem 0rem 2.6rem;
+                gap: 2.2rem;
+            }
         }
 
         p {
@@ -20,14 +45,32 @@
             border-right: 0.1rem solid var(--black);
             width: 20rem;
 
+            @include breakpoint($lb-bp) {
+                border-right: none;
+                width: 100%;
+                display: flex;
+                gap: 0.5rem;
+                align-items: baseline;
+            }
+
             p:first-child {
                 font-size: 4.8rem;
                 font-weight: 700;
+
+
+                @include breakpoint($lb-bp) {
+                    font-size: 3.6rem;
+                }
             }
 
             p:last-child {
                 font-size: 2rem;
                 font-weight: 500;
+                width: 60%;
+
+                @include breakpoint($lb-bp) {
+                    font-size: 1.6rem;
+                }
             }
         }
 
@@ -39,11 +82,19 @@
             p:first-child {
                 font-size: 3.2rem;
                 font-weight: 700;
+
+                @include breakpoint($lb-bp) {
+                    font-size: 2rem;
+                }
             }
 
             p:last-child {
                 font-size: 2rem;
                 font-weight: 400;
+
+                @include breakpoint($lb-bp) {
+                    font-size: 1.6rem;
+                }
 
                 span {
                     font-weight: 600;

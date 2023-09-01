@@ -18,6 +18,88 @@
 
 .scientific-card__swiper-container {
     margin-top: 9rem;
+    position: relative;
+
+    @include breakpoint($xl-bp) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+.scientific-card__swiper-btns {
+    width: fit-content;
+    position: absolute;
+    right: 11.45%;
+    bottom: 0;
+    z-index: 2;
+
+    @include breakpoint($cos-bp) {
+        right: 9.1%;
+    }
+
+    @include breakpoint($xl-bp) {
+        position: unset;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        .scientific-card__swiper-btn-left {
+            border-top: none;
+            border-right: none;
+        }
+
+        .scientific-card__swiper-pagination {
+            width: fit-content;
+            margin-right: 1rem;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12rem;
+        height: 12rem;
+        border: 0.1rem solid var(--black);
+        background: none;
+
+        @include breakpoint($sm-bp) {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        svg {
+            width: 2.4rem;
+            height: 3rem;
+        }
+    }
+
+    .scientific-card__swiper-btn-left {
+
+        svg {
+            rotate: 180deg;
+        }
+    }
+
+    .scientific-card__swiper-btn-right {
+        border-top: none;
+    }
+}
+
+.scientific-card__swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 150%;
+
+    .swiper-pagination-current {
+        font-weight: 600;
+    }
 }
 
 .swiper-slide__img {
@@ -29,3 +111,11 @@
         object-fit: cover;
     }
 }
+
+// .scientific-card__swiper {
+
+//     .swiper-wrapper {
+//         display: flex;
+//         gap: 12rem;
+//     }
+// }

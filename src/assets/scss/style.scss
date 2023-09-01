@@ -7,10 +7,6 @@ html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
 
-  // @include breakpoint($ssh-bp) {
-  //   font-size: calc(100vw / 1600 * 10);
-  // }
-
   @include breakpoint($cos-bp) {
     font-size: calc(100vw / 1330 * 10);
   }
@@ -19,16 +15,12 @@ html {
     font-size: calc(100vw / 1024 * 10);
   }
 
-  // @include breakpoint($jb-bp) {
-  //   font-size: calc(100vw / 850 * 10);
-  // }
-
   @include breakpoint($lb-bp) {
     font-size: calc(100vw / 650 * 10);
   }
 
   @include breakpoint($sm-bp) {
-    font-size: calc(100vw / 375 * 10);
+    font-size: calc(100vw / 480 * 10);
   }
 
 }
@@ -62,8 +54,8 @@ svg {
   padding-right: 10rem;
 
   @include breakpoint($xl-bp) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -72,8 +64,8 @@ svg {
   padding-right: 25rem;
 
   @include breakpoint($cos-bp) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -82,8 +74,8 @@ svg {
   margin-right: 10rem;
 
   @include breakpoint($xl-bp) {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 
@@ -91,7 +83,7 @@ svg {
   padding-left: 10rem;
 
   @include breakpoint($xl-bp) {
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
 }
 
@@ -99,7 +91,7 @@ svg {
   padding-right: 10rem;
 
   @include breakpoint($xl-bp) {
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
 }
 
@@ -107,7 +99,7 @@ svg {
   margin-top: 10rem;
 
   @include breakpoint($xl-bp) {
-    margin-top: 3rem;
+    margin-top: 7rem;
   }
 }
 
@@ -127,3 +119,5 @@ svg {
 @import './blocks/news.scss';
 @import './blocks/scientific-activity.scss';
 @import './blocks/scientific-card.scss';
+@import './blocks/search.scss';
+@import './blocks/contacts.scss';
